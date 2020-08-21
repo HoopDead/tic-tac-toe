@@ -45,7 +45,6 @@ const game = {
         } else if(game.win_combinations.map(arr => arr.every(val => p2.includes(val))).some(x => x == true)) {
             document.getElementById("header").innerHTML = "Player 2 wins!";
             game.actualTurn = -2;
-            console.log(p2);
             let winCombination = game.win_combinations.ap(arr => arr.every(val => p2.includes(val))).indexOf(true); //Check, if there's a win combination in player 2 moves, first it return a array of booleans, and then it checks if there's any true bool in array
             let markTheWinner = this.win_combinations[winCombination];
             markTheWinner.map(numOfRow => document.getElementById(`${numOfRow}`).style.backgroundColor = "#126078");
